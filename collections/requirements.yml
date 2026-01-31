@@ -1,0 +1,3 @@
+collections:
+  - name: community.proxmox
+    source: https://galaxy.ansible.com

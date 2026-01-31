@@ -1,0 +1,13 @@
+plugin: community.proxmox.proxmox
+validate_certs: false
+user: "{{ proxmox_user }}"
+token_id: "{{ proxmox_token_id }}"
+token_secret: "{{ proxmox_token_secret }}"
+url: https://{{ proxmox_url }}:8006
+want_facts: true
+qemu_extended_statuses: true
+groups:
+  kubernetes: proxmox_name.startswith('kube')
+  linux: proxmox_tags == "os_linux"
+  windows: proxmox_tags == "os_windows"
+
