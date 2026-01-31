@@ -1,8 +1,8 @@
 plugin: community.proxmox.proxmox
 validate_certs: false
-user: "{{ proxmox_user }}"
-token_id: "{{ proxmox_token_id }}"
-token_secret: "{{ proxmox_token_secret }}"
+user: "{{ AWS_ACCESS_KEY_ID }}"
+token_id: "{{ AWS_SECRET_ACCESS_KEY }}"
+token_secret: "{{ AWS_SESSION_TOKEN }}"
 url: https://{{ proxmox_url }}:8006
 want_facts: true
 qemu_extended_statuses: true
