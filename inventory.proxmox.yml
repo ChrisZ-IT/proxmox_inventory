@@ -3,7 +3,7 @@ validate_certs: false
 user: "{{ AWS_ACCESS_KEY_ID }}"
 token_id: "{{ AWS_SECRET_ACCESS_KEY }}"
 token_secret: "{{ AWS_SESSION_TOKEN }}"
-url: https://{{ proxmox_url }}:8006
+url: https://192.168.0.4:8006
 want_facts: true
 qemu_extended_statuses: true
 groups:
