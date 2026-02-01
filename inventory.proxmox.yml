@@ -6,4 +6,6 @@ groups:
   kubernetes: proxmox_name.startswith('kube')
   linux: proxmox_tags == "os_linux"
   windows: proxmox_tags == "os_windows"
-
+compose:
+  ansible_host: proxmox_name
+  vm_status: proxmox_status
