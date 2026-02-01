@@ -7,5 +7,5 @@ groups:
   linux: proxmox_tags == "os_linux"
   windows: proxmox_tags == "os_windows"
 compose:
-  ansible_host: proxmox_name.__ansible_unsafe
-  vm_status: proxmox_status.__ansible_unsafe
+  ansible_host: proxmox_name[0]
+  vm_status: proxmox_status[0]
