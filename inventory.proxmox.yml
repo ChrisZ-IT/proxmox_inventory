@@ -8,5 +8,7 @@ groups:
   windows: proxmox_tags == "os_windows"
 compose:
   ansible_host: proxmox_name
+  ansible_ssh_port: 443 if 'ssh_443' in proxmox_tags else 22
+  ip_address: proxmox_agent_interfaces | selectattr('name', 'equalto', 'ens18')
   vm_status: proxmox_status
   vm_is_running: proxmox_status | string == 'running'
